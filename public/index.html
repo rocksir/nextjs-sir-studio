@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+  <head>
+
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0YQ6415YKZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0YQ6415YKZ');
+</script>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>rockeystudio — Official Home</title>
+    <meta name="description" content="Rocky Studio — official site coming soon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+      /* Palette: deep charcoal + warm off-white */
+      :root{
+        --bg:#0b0b0b; /* deep charcoal */
+        --paper:#f7f5ef; /* warm off-white */
+        --muted:rgba(247,245,239,0.68);
+        --accent:#c9b38a; /* subtle warm accent for small detail */
+      }
+
+      *{box-sizing:border-box}
+      html,body{height:100%;margin:0}
+      body{
+        background:var(--bg);
+        color:var(--paper);
+        font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial;
+        -webkit-font-smoothing:antialiased;
+        -moz-osx-font-smoothing:grayscale;
+        display:flex;align-items:stretch;justify-content:stretch;
+      }
+
+      /* Layout uses the full viewport as canvas */
+      .wrap{display:grid;grid-template-columns:1fr;align-items:center;justify-items:start;padding:6vw 8vw;min-height:100vh;gap:2rem}
+
+      /* Brand top-left */
+      .brand{position:fixed;top:5vw;left:6vw;font-size:14px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--paper)}
+
+      /* Editorial composition */
+      .hero{
+        width:100%;max-width:1100px;display:grid;grid-template-columns: 1fr 0.6fr;align-items:start;gap:6vw;margin-left:6vw;
+      }
+
+      /* Large typographic statement */
+      .statement{
+        font-family:'Playfair Display', serif;
+        font-weight:700;
+        font-size:clamp(48px,7.5vw,120px);
+        line-height:0.9;
+        margin:0 0 12px 0;
+        color:var(--paper);
+        letter-spacing:-0.01em;
+        transform-origin:left top;
+      }
+
+      /* Supporting column: small lines and subtle signature */
+      .support{align-self:center;color:var(--muted);font-size:16px;font-weight:300;max-width:320px}
+
+      /* Minimal typographic signature: vertical hairline */
+      .signature{width:2px;height:54px;background:var(--accent);margin-bottom:22px;opacity:0.95;transform-origin:top;}
+
+      /* Footer */
+      footer{position:fixed;left:6vw;bottom:5vw;color:var(--muted);font-size:13px}
+
+      /* Small social/contact link top-right */
+      .contact{position:fixed;right:6vw;top:5vw;color:var(--muted);font-size:13px}
+
+      /* Subtle reveal animation */
+      .reveal .signature{animation:lineGrow 700ms ease-out both 300ms}
+      .reveal .statement{opacity:0;transform:translateY(10px) scale(0.995);animation:fadeUp 700ms cubic-bezier(.2,.9,.3,1) both 420ms}
+      .reveal .support{opacity:0;transform:translateY(6px);animation:fadeUp 720ms cubic-bezier(.2,.9,.3,1) both 540ms}
+
+      @keyframes lineGrow{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+      @keyframes fadeUp{from{opacity:0;transform:translateY(10px) scale(0.995)}to{opacity:1;transform:none}}
+
+      /* Responsive adjustments for mobile */
+      @media(max-width:880px){
+        .hero{grid-template-columns:1fr;gap:3rem;margin-left:4vw}
+        .statement{font-size:clamp(36px,10vw,64px);text-align:left}
+        .support{text-align:left}
+      }
+
+      @media(max-width:420px){
+        .statement{font-size:clamp(28px,12vw,44px)}
+        .wrap{padding:8vw 6vw}
+        .brand{top:6vw;left:6vw}
+        footer{left:6vw;bottom:6vw}
+      }
+      /* Click / tap ripple effect (liquid wobble) */
+      .ripple{
+        position:fixed;
+        border-radius:50%;
+        pointer-events:none;
+        left:0;top:0;
+        background:rgba(201,179,138,0.14);
+        width:24px;
+        height:24px;
+        will-change:transform,opacity,border-radius;
+        opacity:1;
+        z-index:9999;
+        mix-blend-mode:screen;
+        /* single animation combines expansion + wobble */
+        animation: ripple 800ms cubic-bezier(.2,.9,.3,1) forwards;
+      }
+
+      @keyframes ripple{
+        0%{
+          transform:translate(-50%,-50%) scale(0) rotate(0deg);
+          border-radius:50%;
+          opacity:1;
+        }
+        30%{
+          transform:translate(-50%,-50%) scale(3.2) rotate(-3deg);
+          border-radius:46% 54% 54% 46% / 56% 44% 56% 44%;
+          opacity:0.9;
+        }
+        55%{
+          transform:translate(-50%,-50%) scale(6.2) rotate(3deg);
+          border-radius:55% 45% 45% 55% / 44% 56% 44% 56%;
+          opacity:0.6;
+        }
+        100%{
+          transform:translate(-50%,-50%) scale(10) rotate(0deg);
+          border-radius:50%;
+          opacity:0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="brand" aria-hidden="false">rockeystudio</div>
+
+    <div class="wrap" id="wrap">
+      <main class="hero" role="main" aria-labelledby="main-statement">
+        <div>
+          <div class="signature" aria-hidden="true"></div>
+          <h1 id="main-statement" class="statement">THE STUDIO<br>IS BEING BUILT.</h1>
+        </div>
+
+        <aside class="support" aria-label="supporting note">
+          <p style="margin:0">A considered, independent creative studio. This domain is the studio’s official home — more to arrive here soon.</p>
+        </aside>
+      </main>
+    </div>
+    <footer id="site-footer">© <span id="year">2026</span> rockeystudio</footer>
+
+      <script>
+      // Minimal JS: set year, trigger reveal animation, and add click/tap ripple
+      document.addEventListener('DOMContentLoaded', ()=>{
+        const y = new Date().getFullYear();
+        document.getElementById('year').textContent = y;
+        // add reveal class to start subtle animations
+        requestAnimationFrame(()=> document.getElementById('wrap').classList.add('reveal'));
+
+        // --- Ripple interaction ---
+        const active = new Set();
+        const maxActive = 8;
+
+        function createRipple(x, y){
+          const el = document.createElement('div');
+          el.className = 'ripple';
+          // size scales with viewport for a subtle, editorial touch
+          const size = Math.max(window.innerWidth, window.innerHeight) * 0.12;
+          const finalSize = Math.max(24, size);
+          el.style.width = el.style.height = finalSize + 'px';
+          el.style.left = x + 'px';
+          el.style.top = y + 'px';
+          document.body.appendChild(el);
+
+          // remove after animation
+          const t = setTimeout(()=>{
+            el.remove();
+            active.delete(t);
+          }, 820);
+          active.add(t);
+
+          // keep active set bounded
+          if(active.size > maxActive){
+            const it = active.values().next();
+            if(!it.done){
+              clearTimeout(it.value);
+              active.delete(it.value);
+            }
+          }
+        }
+
+        // Use pointerdown to support mouse/touch/stylus
+        window.addEventListener('pointerdown', (ev)=>{
+          createRipple(ev.clientX, ev.clientY);
+        }, {passive:true});
+      });
+    </script>
+    <style>
+      /* Footer centered and responsive */
+      #site-footer{position:fixed;left:50%;transform:translateX(-50%);bottom:5vw;color:var(--muted);font-size:13px}
+      @media(max-width:420px){#site-footer{left:50%;bottom:6vw}}
+    </style>
+  </body>
+</html>
