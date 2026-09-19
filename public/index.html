@@ -1,208 +1,76 @@
 <!doctype html>
 <html lang="en">
   <head>
-
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-0YQ6415YKZ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-0YQ6415YKZ');
-</script>
-
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>rockeystudio — Official Home</title>
-    <meta name="description" content="Rocky Studio — official site coming soon" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-      /* Palette: deep charcoal + warm off-white */
-      :root{
-        --bg:#0b0b0b; /* deep charcoal */
-        --paper:#f7f5ef; /* warm off-white */
-        --muted:rgba(247,245,239,0.68);
-        --accent:#c9b38a; /* subtle warm accent for small detail */
-      }
-
-      *{box-sizing:border-box}
-      html,body{height:100%;margin:0}
-      body{
-        background:var(--bg);
-        color:var(--paper);
-        font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial;
-        -webkit-font-smoothing:antialiased;
-        -moz-osx-font-smoothing:grayscale;
-        display:flex;align-items:stretch;justify-content:stretch;
-      }
-
-      /* Layout uses the full viewport as canvas */
-      .wrap{display:grid;grid-template-columns:1fr;align-items:center;justify-items:start;padding:6vw 8vw;min-height:100vh;gap:2rem}
-
-      /* Brand top-left */
-      .brand{position:fixed;top:5vw;left:6vw;font-size:14px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--paper)}
-
-      /* Editorial composition */
-      .hero{
-        width:100%;max-width:1100px;display:grid;grid-template-columns: 1fr 0.6fr;align-items:start;gap:6vw;margin-left:6vw;
-      }
-
-      /* Large typographic statement */
-      .statement{
-        font-family:'Playfair Display', serif;
-        font-weight:700;
-        font-size:clamp(48px,7.5vw,120px);
-        line-height:0.9;
-        margin:0 0 12px 0;
-        color:var(--paper);
-        letter-spacing:-0.01em;
-        transform-origin:left top;
-      }
-
-      /* Supporting column: small lines and subtle signature */
-      .support{align-self:center;color:var(--muted);font-size:16px;font-weight:300;max-width:320px}
-
-      /* Minimal typographic signature: vertical hairline */
-      .signature{width:2px;height:54px;background:var(--accent);margin-bottom:22px;opacity:0.95;transform-origin:top;}
-
-      /* Footer */
-      footer{position:fixed;left:6vw;bottom:5vw;color:var(--muted);font-size:13px}
-
-      /* Small social/contact link top-right */
-      .contact{position:fixed;right:6vw;top:5vw;color:var(--muted);font-size:13px}
-
-      /* Subtle reveal animation */
-      .reveal .signature{animation:lineGrow 700ms ease-out both 300ms}
-      .reveal .statement{opacity:0;transform:translateY(10px) scale(0.995);animation:fadeUp 700ms cubic-bezier(.2,.9,.3,1) both 420ms}
-      .reveal .support{opacity:0;transform:translateY(6px);animation:fadeUp 720ms cubic-bezier(.2,.9,.3,1) both 540ms}
-
-      @keyframes lineGrow{from{transform:scaleY(0)}to{transform:scaleY(1)}}
-      @keyframes fadeUp{from{opacity:0;transform:translateY(10px) scale(0.995)}to{opacity:1;transform:none}}
-
-      /* Responsive adjustments for mobile */
-      @media(max-width:880px){
-        .hero{grid-template-columns:1fr;gap:3rem;margin-left:4vw}
-        .statement{font-size:clamp(36px,10vw,64px);text-align:left}
-        .support{text-align:left}
-      }
-
-      @media(max-width:420px){
-        .statement{font-size:clamp(28px,12vw,44px)}
-        .wrap{padding:8vw 6vw}
-        .brand{top:6vw;left:6vw}
-        footer{left:6vw;bottom:6vw}
-      }
-      /* Click / tap ripple effect (liquid wobble) */
-      .ripple{
-        position:fixed;
-        border-radius:50%;
-        pointer-events:none;
-        left:0;top:0;
-        background:rgba(201,179,138,0.14);
-        width:24px;
-        height:24px;
-        will-change:transform,opacity,border-radius;
-        opacity:1;
-        z-index:9999;
-        mix-blend-mode:screen;
-        /* single animation combines expansion + wobble */
-        animation: ripple 800ms cubic-bezier(.2,.9,.3,1) forwards;
-      }
-
-      @keyframes ripple{
-        0%{
-          transform:translate(-50%,-50%) scale(0) rotate(0deg);
-          border-radius:50%;
-          opacity:1;
-        }
-        30%{
-          transform:translate(-50%,-50%) scale(3.2) rotate(-3deg);
-          border-radius:46% 54% 54% 46% / 56% 44% 56% 44%;
-          opacity:0.9;
-        }
-        55%{
-          transform:translate(-50%,-50%) scale(6.2) rotate(3deg);
-          border-radius:55% 45% 45% 55% / 44% 56% 44% 56%;
-          opacity:0.6;
-        }
-        100%{
-          transform:translate(-50%,-50%) scale(10) rotate(0deg);
-          border-radius:50%;
-          opacity:0;
-        }
-      }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Rockey Studio presents considered products, books, services, and selected offers." />
+    <meta property="og:title" content="Rockey Studio | Products and services" />
+    <meta property="og:description" content="Explore products, books, and services from Rockey Studio." />
+    <meta property="og:type" content="website" />
+    <link rel="canonical" href="https://rockeystudio.com/" />
+    <script type="application/ld+json">
+      {"@context":"https://schema.org","@type":"Organization","name":"Rockey Studio","url":"https://rockeystudio.com/"}
+    </script>
+    <title>Rockey Studio | Products and services</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
   </head>
   <body>
-    <div class="brand" aria-hidden="false">rockeystudio</div>
+    <header class="site-header container">
+      <a class="wordmark" href="/" aria-label="Rockey Studio home">Rockey Studio</a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="/products/">Products</a>
+        <a href="/services/">Services</a>
+        <a href="/offers/">Offers</a>
+        <a class="nav-cta" href="#contact">Contact</a>
+      </nav>
+    </header>
 
-    <div class="wrap" id="wrap">
-      <main class="hero" role="main" aria-labelledby="main-statement">
-        <div>
-          <div class="signature" aria-hidden="true"></div>
-          <h1 id="main-statement" class="statement">THE STUDIO<br>IS BEING BUILT.</h1>
+    <main>
+      <section class="hero container" aria-labelledby="hero-title">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Products + services, thoughtfully presented</p>
+          <h1 id="hero-title">Make every offer feel <em>impossible</em> to ignore.</h1>
+          <p class="hero-intro">A clear, considered space to discover books, products, services, and useful offers from Rockey Studio.</p>
+          <div class="hero-actions">
+            <a class="button button-dark" href="/products/">Explore products <span aria-hidden="true">↗</span></a>
+            <a class="text-link" href="/services/">View services <span aria-hidden="true">↗</span></a>
+          </div>
         </div>
+        <div class="hero-art reveal reveal-delay" aria-label="A warm abstract composition representing the studio catalogue" role="img">
+          <div class="art-label">R / 01</div>
+          <div class="art-shape art-shape-one"></div>
+          <div class="art-shape art-shape-two"></div>
+          <div class="art-card">The<br /><strong>catalogue</strong><br />is open.</div>
+        </div>
+      </section>
 
-        <aside class="support" aria-label="supporting note">
-          <p style="margin:0">A considered, independent creative studio. This domain is the studio’s official home — more to arrive here soon.</p>
-        </aside>
-      </main>
-    </div>
-    <footer id="site-footer">© <span id="year">2026</span> rockeystudio</footer>
+      <section class="feature-band container" aria-labelledby="feature-title">
+        <div><p class="eyebrow">A place for good work</p><h2 id="feature-title">From local books to carefully chosen services.</h2></div>
+        <p>Rockey Studio helps people find what is worth their time, whether that means discovering an independent author or choosing support for their next project.</p>
+      </section>
 
-      <script>
-      // Minimal JS: set year, trigger reveal animation, and add click/tap ripple
-      document.addEventListener('DOMContentLoaded', ()=>{
-        const y = new Date().getFullYear();
-        document.getElementById('year').textContent = y;
-        // add reveal class to start subtle animations
-        requestAnimationFrame(()=> document.getElementById('wrap').classList.add('reveal'));
+      <section class="catalogue-preview container" id="services" aria-labelledby="services-title">
+        <div class="section-heading"><p class="eyebrow">What we help you discover</p><h2 id="services-title">Everything your next moment needs.</h2><a class="text-link" href="/products/">Browse the catalogue <span aria-hidden="true">↗</span></a></div>
+        <div class="service-grid">
+          <article class="service-item"><span>01</span><h3>Product discovery</h3><p>Find thoughtful products and books in one focused place.</p></article>
+          <article class="service-item"><span>02</span><h3>Author support</h3><p>Helping independent authors make their work easier to find.</p></article>
+          <article class="service-item"><span>03</span><h3>Creative services</h3><p>Photography, videography, and practical support for meaningful projects.</p></article>
+        </div>
+      </section>
 
-        // --- Ripple interaction ---
-        const active = new Set();
-        const maxActive = 8;
+      <section class="closing-band container" id="offers" aria-labelledby="offers-title">
+        <div><p class="eyebrow">Selected offers</p><h2 id="offers-title">Useful things, carefully brought together.</h2></div>
+        <p>Offers and recommendations will live separately from Rockey Studio's own products, with clear disclosure whenever an external referral is involved. <a class="text-link" href="/offers/">Explore offers <span aria-hidden="true">↗</span></a></p>
+      </section>
+    </main>
 
-        function createRipple(x, y){
-          const el = document.createElement('div');
-          el.className = 'ripple';
-          // size scales with viewport for a subtle, editorial touch
-          const size = Math.max(window.innerWidth, window.innerHeight) * 0.12;
-          const finalSize = Math.max(24, size);
-          el.style.width = el.style.height = finalSize + 'px';
-          el.style.left = x + 'px';
-          el.style.top = y + 'px';
-          document.body.appendChild(el);
-
-          // remove after animation
-          const t = setTimeout(()=>{
-            el.remove();
-            active.delete(t);
-          }, 820);
-          active.add(t);
-
-          // keep active set bounded
-          if(active.size > maxActive){
-            const it = active.values().next();
-            if(!it.done){
-              clearTimeout(it.value);
-              active.delete(it.value);
-            }
-          }
-        }
-
-        // Use pointerdown to support mouse/touch/stylus
-        window.addEventListener('pointerdown', (ev)=>{
-          createRipple(ev.clientX, ev.clientY);
-        }, {passive:true});
-      });
-    </script>
-    <style>
-      /* Footer centered and responsive */
-      #site-footer{position:fixed;left:50%;transform:translateX(-50%);bottom:5vw;color:var(--muted);font-size:13px}
-      @media(max-width:420px){#site-footer{left:50%;bottom:6vw}}
-    </style>
+    <footer class="site-footer container" id="contact">
+      <div><a class="wordmark" href="/">Rockey Studio</a><p>Products, services, and meaningful discoveries.</p></div>
+      <div class="footer-meta"><a href="#contact">Contact Rockey Studio ↗</a><span>© <span id="year"></span> Rockey Studio</span></div>
+    </footer>
+    <script src="/main.js?v=2"></script>
   </body>
 </html>
