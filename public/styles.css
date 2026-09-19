@@ -160,6 +160,10 @@ h2 { margin-bottom: 0; font-size: clamp(38px, 5vw, 66px); line-height: 1; }
 .detail-list li::before { margin-right: 10px; color: var(--rust); content: "↗"; }
 .detail-empty { min-height: 60vh; padding-block: 130px; }
 .detail-empty h1 { font-size: clamp(48px, 7vw, 90px); }
+.breadcrumbs { padding-bottom: 28px; }
+.breadcrumbs ol { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; color: var(--muted); font-size: 12px; list-style: none; }
+.breadcrumbs li:not(:last-child)::after { margin-left: 8px; color: var(--rust); content: "/"; }
+.breadcrumbs a:hover { color: var(--ink); }
 @media (max-width: 760px) {
   .detail-hero { grid-template-columns: 1fr; gap: 55px; padding-block: 70px 80px; }
   .detail-visual { min-height: 360px; }
