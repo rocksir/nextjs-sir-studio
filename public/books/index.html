@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Explore books in the Rockey Studio catalogue, including demo titles prepared for layout testing." />
+    <meta property="og:title" content="Books | Rockey Studio" />
+    <meta property="og:description" content="Explore the Rockey Studio books catalogue." />
+    <meta property="og:type" content="website" />
+    <link rel="canonical" href="https://rockeystudio.com/books/" />
+    <title>Books | Rockey Studio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="site-header container">
+      <a class="wordmark" href="/" aria-label="Rockey Studio home">Rockey Studio</a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="/products/">Products</a>
+        <a href="/services/">Services</a>
+        <a href="/offers/">Offers</a>
+        <a class="nav-cta" href="/#contact">Contact</a>
+      </nav>
+    </header>
+    <main>
+      <section class="catalogue-hero container reveal" aria-labelledby="books-title">
+        <p class="eyebrow">Our books</p>
+        <h1 id="books-title">Books made to be <em>discovered.</em></h1>
+        <p class="hero-intro">Browse the Rockey Studio books catalogue. The current entries are demo records for design verification until real titles and purchase details are supplied.</p>
+      </section>
+      <section class="book-preview container" aria-labelledby="book-grid-title">
+        <div class="section-heading"><p class="eyebrow">The collection</p><h2 id="book-grid-title">A closer look at the books collection.</h2><p class="section-note">Demo cards are clearly marked and are not live product listings.</p></div>
+        <div class="book-grid" id="book-grid" aria-label="Books catalogue"></div>
+      </section>
+    </main>
+    <footer class="site-footer container" id="contact"><div><a class="wordmark" href="/">Rockey Studio</a><p>Products, services, and meaningful discoveries.</p></div><div class="footer-meta"><a href="/#contact">Contact Rockey Studio ↗</a><span>© <span id="year"></span> Rockey Studio</span></div></footer>
+    <script src="/data/books.js?v=1"></script>
+    <script src="/data/content-api.js?v=1"></script>
+    <script src="/main.js?v=5"></script>
+  </body>
+</html>

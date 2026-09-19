@@ -14,7 +14,7 @@ function renderProducts() {
         <p class="product-type">Product · ${product.category}</p>
         <h2>${product.name}</h2>
         <p>${product.shortDescription}</p>
-        <a class="text-link" href="#${product.id}">View product <span aria-hidden="true">↗</span></a>
+        <a class="text-link" href="/products/${product.slug}/">View product <span aria-hidden="true">↗</span></a>
       </div>
     </article>`;
   }).join('');
@@ -35,7 +35,7 @@ function renderBooks() {
       <p class="product-type">${book.genre} · ${book.availability}</p>
       <h3>${book.title}</h3>
       <p>${book.description}</p>
-      <span class="text-link book-disabled-link">Details coming later <span aria-hidden="true">↗</span></span>
+      <a class="text-link book-disabled-link" href="/books/${book.slug}/">View book <span aria-hidden="true">↗</span></a>
     </div>
   </article>`).join('');
 }
@@ -52,7 +52,7 @@ function renderServices() {
       <h2>${service.name}</h2>
       <p>${service.description}</p>
     </div>
-    <a class="text-link" href="/#contact">${service.cta} <span aria-hidden="true">↗</span></a>
+    <a class="text-link" href="/services/${service.slug}/">${service.cta} <span aria-hidden="true">↗</span></a>
   </article>`).join('');
 }
 
